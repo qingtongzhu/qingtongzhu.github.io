@@ -1,0 +1,789 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="languages, Xiao Cui">
+    <meta name="description" content="languages | Xiao Cui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>languages | Xiao Cui</title>
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    <span class="logo-span">Xiao Cui</span>
+                </a>
+            </div>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/career" class="waves-effect waves-light">
+            <i class="fa fa-briefcase"></i>
+            <span>职场</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tech" class="waves-effect waves-light">
+            <i class="fa fa-cloud"></i>
+            <span>科技</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/business" class="waves-effect waves-light">
+            <i class="fa fa-bank"></i>
+            <span>商业</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/study" class="waves-effect waves-light">
+            <i class="fa fa-graduation-cap"></i>
+            <span>博学</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/design" class="waves-effect waves-light">
+            <i class="fa fa-tachometer"></i>
+            <span>设计</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/languages" class="waves-effect waves-light">
+            <i class="fa fa-globe"></i>
+            <span>语言</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/life" class="waves-effect waves-light">
+            <i class="fa fa-coffee"></i>
+            <span>生活</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/food" class="waves-effect waves-light">
+            <i class="fa fa-cutlery"></i>
+            <span>美食</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/film" class="waves-effect waves-light">
+            <i class="fa fa-film"></i>
+            <span>影音</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/travel" class="waves-effect waves-light">
+            <i class="fa fa-plane"></i>
+            <span>旅行</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/philosophy" class="waves-effect waves-light">
+            <i class="fa fa-book"></i>
+            <span>感悟</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+            <span>搜索</span>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/avatar.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Xiao Cui</div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/career" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-briefcase"></i>
+                <span>职场</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tech" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cloud"></i>
+                <span>科技</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/business" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-bank"></i>
+                <span>商业</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/study" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-graduation-cap"></i>
+                <span>博学</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/design" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-tachometer"></i>
+                <span>设计</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/languages" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-globe"></i>
+                <span>语言</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/life" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-coffee"></i>
+                <span>生活</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/food" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cutlery"></i>
+                <span>美食</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/film" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-film"></i>
+                <span>影音</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/travel" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-plane"></i>
+                <span>旅行</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/philosophy" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-book"></i>
+                <span>感悟</span>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+        </div>
+    </nav>
+
+</header>
+
+
+
+<div class="bg-cover pd-header about-cover">
+    <div class="container">
+        <div class="title">
+            <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+                <div class="brand">
+                    <div class="title center-align">
+                        
+                            Work for a career success.
+                                    
+                    </div>
+
+                    <div class="description center-align">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.bg-cover').css('background-image', 'url(https://cdn.pixabay.com/photo/2018/11/03/03/25/hello-3791381_1280.png)');
+</script>
+
+<main class="content">
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    <h2>英语学习网站</h2>
+                    
+
+<div class="row">
+    
+        <div class="item">
+            <a href="https://www.enewsdispatch.com/" target="_blank">
+                
+                    <img src="https://www.enewsdispatch.com/wp-content/uploads/2017/10/coffeecup-100x100.png">
+                    
+                    &nbsp;&nbsp;E-News
+             </a>
+        </div>
+        
+        <div class="item">
+            <a href="https://www.plainnews.org/" target="_blank">
+                
+                    <img src="https://www.plainnews.org/wp-content/uploads/plain-news-logo.png">
+                    
+                    &nbsp;&nbsp;Plain News
+             </a>
+        </div>
+        
+        <div class="item">
+            <a href="https://www.thetimesinplainenglish.com/" target="_blank">
+                
+                    <img src="https://www.thetimesinplainenglish.com/wp-content/themes/magazine-basic/images/tipe-masthead-02.jpg">
+                    
+                    &nbsp;&nbsp;The Times
+             </a>
+        </div>
+        
+        <div class="item">
+            <a href="https://www.stitcher.com/podcast/wbur/modern-love#/" target="_blank">
+                
+                    <img src="https://www.stitcher.com/assets/images/stitcher-header-logo-2.png">
+                    
+                    &nbsp;&nbsp;Modern Love
+             </a>
+        </div>
+        
+        <div class="item">
+            <a href="http://www.openculture.com/" target="_blank">
+                
+                    <img src="http://cdn8.openculture.com/2017/06/17162746/OC-favicon-150x150.png">
+                    
+                    &nbsp;&nbsp;Open Culture
+             </a>
+        </div>
+        
+        <div class="item">
+            <a href="http://www.manythings.org/" target="_blank">
+                
+                    <img src="http://www.manythings.org/favicon-32x32.png">
+                    
+                    &nbsp;&nbsp;Many Things
+             </a>
+        </div>
+        
+        <div class="item">
+            <a href="https://www.theskimm.com/news/daily-skimm" target="_blank">
+                
+                    <img src="https://web2.theskimm.com/favicon/favicon-32x32.png">
+                    
+                    &nbsp;&nbsp;The Skimm
+             </a>
+        </div>
+        
+        <div class="item">
+            <a href="https://www.thisamericanlife.org/" target="_blank">
+                
+                    <img src="https://www.thisamericanlife.org/sites/all/themes/thislife/favicons/favicon-32x32.png">
+                    
+                    &nbsp;&nbsp;This American Life
+             </a>
+        </div>
+        
+        <div class="item">
+            <a href="http://www.eudic.cn/ting/" target="_blank">
+                
+                    <img src="http://www.eudic.cn/Images/en/apple_icon.png">
+                    
+                    &nbsp;&nbsp;每日英语听力
+             </a>
+        </div>
+        
+        <div class="item">
+            <a href="https://www.yxgapp.com/" target="_blank">
+                
+                    <img src="https://cdn-www.yxgapp.com/wp-content/uploads/2018/12/yxg-logo-100x100.png">
+                    
+                    &nbsp;&nbsp;译学馆
+             </a>
+        </div>
+        
+</div>
+
+                    <h2>TED</h2>
+                    
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Thu Jul 28 2016 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2016-07-28
+                    </time>
+                    <a href="/languages/ted/how-the-blockchain-is-changing-money-and-business/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        How the blockchain is changing money and business
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Mon Oct 28 2013 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2013-10-28
+                    </time>
+                    <a href="/languages/ted/your-body-language-may-shape-who-you-are/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        Your body language may shape who you are
+                    </a>
+                </header>
+            </div>
+        
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+                    
+                    <h2>Articles</h2>
+                    
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Tue Jul 24 2018 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2018-07-24
+                    </time>
+                    <a href="/languages/english-reading/how-to-stay-motivated-even-though-you-can-t-see-yourself-moving-forward/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        How to Stay Motivated Even Though You Can’t See Yourself Moving Forward
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Sun Jun 10 2018 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2018-06-10
+                    </time>
+                    <a href="/languages/english-reading/time-management-hacks-i-wish-i-d-known-before-my-20s/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        Time Management Hacks I Wish I’d Known Before My 20s
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Wed Nov 09 2016 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2016-11-09
+                    </time>
+                    <a href="/languages/english-reading/top-10-strategic-technology-trends-for-2018/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        Gartner Identifies the Top 10 Strategic Technology Trends for 2018
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Tue May 31 2016 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2016-05-31
+                    </time>
+                    <a href="/languages/english-reading/innovation-s-key-ingredients-chaos-risk-blenders/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        Innovation's Key Ingredients, Chaos, Risk, & Blenders
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Tue Feb 09 2016 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2016-02-09
+                    </time>
+                    <a href="/languages/english-reading/don-t-create-a-sense-of-urgency-foster-a-sense-of-purpose/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        Don’t create a sense of urgency, foster a sense of purpose.
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Sun Dec 27 2015 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2015-12-27
+                    </time>
+                    <a href="/languages/english-reading/5-research-backed-secrets-to-concentration/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        How To Focus? 5 Research-Backed Secrets To Concentration
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Wed Dec 09 2015 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2015-12-09
+                    </time>
+                    <a href="/languages/english-reading/these-12-habits-are-killing-your-productivity/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        These 12 Habits Are Killing Your Productivity
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Fri Nov 27 2015 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2015-11-27
+                    </time>
+                    <a href="/languages/english-reading/why-the-greatest-minds-take-long-walks/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        Why the Greatest Minds Take Long Walks
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Mon Nov 16 2015 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2015-11-16
+                    </time>
+                    <a href="/languages/english-reading/the-problem-isn-t-that-life-is-unfair-it-s-that-you-don-t-know-the-rules/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        The problem isn't that life is unfair — it's that you don't know the rules.
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Wed Oct 21 2015 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2015-10-21
+                    </time>
+                    <a href="/languages/english-reading/4-scientifically-proven-methods-to-increase-your-productivity/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        4 scientifically proven methods to increase your productivity
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Tue Oct 20 2015 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2015-10-20
+                    </time>
+                    <a href="/languages/english-reading/you-don-t-have-to-love-what-you-do/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        You Don’t Have to Love What You Do
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Fri Oct 16 2015 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2015-10-16
+                    </time>
+                    <a href="/languages/english-reading/18-things-successful-people-do-in-the-first-10-minutes-of-the-workday/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        18 things successful people do in the first 10 minutes of the workday
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Tue Oct 13 2015 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2015-10-13
+                    </time>
+                    <a href="/languages/english-reading/there-is-something-extraordinary-happening-in-the-world/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        There is something extraordinary happening in the world.
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Sat Sep 19 2015 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2015-09-19
+                    </time>
+                    <a href="/languages/english-reading/multi-tasking-how-to-survive-in-the-21st-century/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        Multi-tasking - how to survive in the 21st century
+                    </a>
+                </header>
+            </div>
+        
+            <div class="archive-article">
+                <header style="margin-bottom: 15px">
+                    <time datetime="Mon Oct 28 2013 00:00:00 GMT+0800" style="color: #999; margin-right: 15px;">
+                        2013-10-28
+                    </time>
+                    <a href="/languages/english-reading/forget-about-setting-goals.focus-on-having-a-system/" style="border-left: 1px solid #333; padding-left: 15px; color: #333;">
+                        Forget About Setting Goals. Focus on Having a system.
+                    </a>
+                </header>
+            </div>
+        
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+
+                    
+                        <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red"><i class="fa fa-thumbs-up"></i></a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title"></h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+                        
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+</body>
+</html>
