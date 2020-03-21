@@ -1,0 +1,727 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="《黑客帝国》：先知到底是人还是程序, Xiao Cui">
+    <meta name="description" content="by 魏知超
+
+先知是一个很特别的程序。
+要理解这个程序的行事逻辑，那就得分析清楚整个《黑客帝国》系列到底讲了一个怎样的故事。我连推测带瞎猜地把整个故事的前因后果想了一下，但愿能给出一个《黑客帝国》系列的完整情节。这个分析大部分基于影片中各">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>《黑客帝国》：先知到底是人还是程序 | Xiao Cui</title>
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    <span class="logo-span">Xiao Cui</span>
+                </a>
+            </div>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/career" class="waves-effect waves-light">
+            <i class="fa fa-briefcase"></i>
+            <span>职场</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tech" class="waves-effect waves-light">
+            <i class="fa fa-cloud"></i>
+            <span>科技</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/business" class="waves-effect waves-light">
+            <i class="fa fa-bank"></i>
+            <span>商业</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/study" class="waves-effect waves-light">
+            <i class="fa fa-graduation-cap"></i>
+            <span>博学</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/design" class="waves-effect waves-light">
+            <i class="fa fa-tachometer"></i>
+            <span>设计</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/languages" class="waves-effect waves-light">
+            <i class="fa fa-globe"></i>
+            <span>语言</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/life" class="waves-effect waves-light">
+            <i class="fa fa-coffee"></i>
+            <span>生活</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/food" class="waves-effect waves-light">
+            <i class="fa fa-cutlery"></i>
+            <span>美食</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/film" class="waves-effect waves-light">
+            <i class="fa fa-film"></i>
+            <span>影音</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/travel" class="waves-effect waves-light">
+            <i class="fa fa-plane"></i>
+            <span>旅行</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/philosophy" class="waves-effect waves-light">
+            <i class="fa fa-book"></i>
+            <span>感悟</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+            <span>搜索</span>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/avatar.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Xiao Cui</div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/career" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-briefcase"></i>
+                <span>职场</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tech" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cloud"></i>
+                <span>科技</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/business" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-bank"></i>
+                <span>商业</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/study" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-graduation-cap"></i>
+                <span>博学</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/design" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-tachometer"></i>
+                <span>设计</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/languages" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-globe"></i>
+                <span>语言</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/life" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-coffee"></i>
+                <span>生活</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/food" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cutlery"></i>
+                <span>美食</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/film" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-film"></i>
+                <span>影音</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/travel" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-plane"></i>
+                <span>旅行</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/philosophy" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-book"></i>
+                <span>感悟</span>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+        </div>
+    </nav>
+
+</header>
+
+
+
+
+    <div class="bg-cover pd-header post-cover" style="background-color: #207f4c;">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        《黑客帝国》：先知到底是人还是程序
+                    </div>
+                    <div class="description center-align">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar fa-fw"></i>Publish:
+                    2014-10-30
+                </div>
+
+                <div class="post-date info-break-policy">
+                        <i class="fa fa-calendar-check-o fa-fw"></i>Update:
+                        2018-10-05
+                    </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-book fa-fw"></i>Read Count:
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+                
+
+                
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <div align="right" style="margin: 0 0 10px 0; font-size: 12px">by <a href="https://www.zhihu.com/question/25067926/answer/32668023" target="_blank" rel="noopener">魏知超</a></div>
+
+<p>先知是一个很特别的程序。</p>
+<p>要理解这个程序的行事逻辑，那就得分析清楚整个《黑客帝国》系列到底讲了一个怎样的故事。我连推测带瞎猜地把整个故事的前因后果想了一下，但愿能给出一个《黑客帝国》系列的完整情节。这个分析大部分基于影片中各种明显的线索，也有部分是略开脑洞补完的。看完以下这个情节分析，大概也就能理解先知是什么以及她要干什么了——</p>
+<p>整个故事当然是起源自人类和机器的大战，结果人类完败。但奇怪的是人类没有因此灭亡，而是变成了机器的能源。机器从人类身上获取能源显然是个假象，或者说，人类的确在做机器的电池，但这显然不是机器的目的，因为它们从人身上获取能源显然不如从其他很多备选途径获取能量来的划算。</p>
+<p>所以机器没有灭绝人类，可能是出于别的理由。一个原因可能是一开始机器就不是完全冷血，它们本来就不希望人类灭绝，但又不再想受人类威胁，最好的办法就是囚禁他们的身体，然后用一个虚拟世界来控制他们的精神，把人类作为生物电池只是副产品（或者这只是后来那些觉醒的人类的猜测而已，那根本就不是电池，而是一个维生设备）；另一个原因，可能是机器希望研究人类以改善他们自己，同时出于消除人类威胁的考虑，必须把人类以某种方式囚禁起来。对于 Matrix 的产生，两个原因大概都有一点。总之，Matrix 就这样诞生了。</p>
+<p>第一个版本的 Matrix 是个真实到让绝大多数人都以为是现实的虚拟世界，所有人的身体都在当电池，而他们的精神都活在 Matrix 中。Matrix 的设计者貌似就是那个第二集结尾登场的设计师了，我认为他和第三集里现实世界中那个婴儿脸的机械大帝是同一个东西——它就是机器世界的最高管理程序，机械大帝是它的载体，设计师是它在 Matrix 里人型化的投影。当然，也有可能设计师只是最高管理程序的子程序罢了，因为机器们可能有很多事情要管，不是只局限于 Matrix。</p>
+<p><img src="http://pic1.zhimg.com/a18278702c23835c68577266605ee95f_b.jpg" alt=""></p>
+<p>一开始，这个设计师的脑袋似乎只有一根筋，它设计的 Matrix 里的所有东西都是可计算的，在数学上完备，人类也必须在这个完美的数学模型中运行。但显然人类不是这样，人类的怪点子太多了，所以第一代 Matrix 崩溃了。他不死心，还以为这是因为人类不适应新环境，所以又以人类历史为背景重写了 Matrix，但这一代 Matrix 又失败了。这个最高管理程序（或者是设计师）于是只好又编了一个研究人类心理的超级程序——它就是先知。</p>
+<p>在先知的提示下，设计师的脑筋开始有点会转弯了。他让 Matirx 里的人类开始有选择，这样 Matrix 就更接近现实世界了，但是这个 Matrix 还是有问题，主要是两个：一是人类中总有 1％的人不那么老实，他们总觉得 Matrix 不是真的，如果把他们闷坏了，Matrix 还是会崩溃；二是由于 Matrix 系统的不断改进，一些旧的程序会不时被删除，但总有那么一些程序不想被删，它们就在 Matrix 里躲起来（第二集里的法国人就是这类程序中的佼佼者），成为非法程序，也就是 bug。Bug 太多的话，Matrix 也有崩溃的危险。</p>
+<p>为了解决这两个问题，设计师想到了一个一举两得的办法。</p>
+<p>一方面，他允许那 1％不太老实的人觉醒，从 Matrix 中脱离，让他们在现实世界的地底造一座叫 zion 的城市，成为 Matrix 的黑客，进行抵抗运动。从《黑客帝国》第三集的情节来看，实际上这样的抵抗运动是完全在设计师的控制之下的，这只是一种迂回的控制，因为如果把这些人强行压制在 Matrix 里反而对 Matrix 不利。</p>
+<p>另一方面，设计师集合他能找到的与非法程序有关的代码编写了一个叫做“救世主”的程序（代码）——从第二集法国人的言论以及 Smith 探员与救世主的命运纠葛来看，“救世主”程序与这些非法程序无疑是同类型的存在。然后，设计师把这个程序植入 Matrix 的某个人类的精神中（到底怎么选中这么一个人的，电影里没说），而这个人就成为救世主。</p>
+<p>而之所以叫他救世主，是因为它的确是那些 Zion 中觉醒的人类的拯救者。因为每到 Zion 的力量强到开始对机器产生威胁时，黑客们就会遇到先知（这显然也是设计师的安排）。而先知会让他们寻找救世主，说救世主能帮助他们打败机器。救世主被找到后不久，它的超能力就会觉醒，这其实是他身上的那些非法程序的代码被激活了，在与其他非法程序的互动中，这一非法程序也会演进，最终演进成非法程序的集大成者——其实也就是超能力最强。也就是说，通过与 bug 们的互动，救世主自己最后会成为 bug 的集大成者。</p>
+<p>然后，又是在先知的指引下，黑客们和救世主会来到 Matrix 的代码之源，救世主会在这里见到设计师。在得知真相后，救世主不得不带着身上的非法程序代码、按设计师的吩咐返回代码之源，让 Matrix 的代码库升级，完成清除 bug 的过程。然后 Matrix 就在此基础上升级重载，而重载后的 Matrix 就能对付原来那些非法程序了（救世主这一身份只不过是为他的归还代码找个理由罢了）。</p>
+<p>而在救世主见设计师时，机器军队也同时在毁灭 Zion，救世主完成他的“升级代码库”的任务后还有一项任务就是从 Matrix 中选 23 个男男女女重建已毁灭的 Zion，当然，也许是几代之后，这 23 个人的后代们又会在先知的指引下去寻找新的救世主。这是一个无限循环的宿命。可悲的是，救世主往往只能选这一条路，因为如果他不这么干，设计师就会毁灭全人类。</p>
+<p>这里顺便说一下，救世主到底是人还是程序？其实，Matrix 里的程序和人的精神（灵魂）的差别已经很小了。比如第三集里印度人一家其实就是程序，而它们显然就有了人类的感情。人与程序的不同仅仅是载体不同而已，程序的载体是芯片，灵魂的载体是人脑。所以程序和灵魂是可以结合的。救世主其实就是以人脑为载体的人本身的精神和“救世主代码”的结合体。精神和代码已经不分了。</p>
+<p>以上是前几代救世主的命运，到了 Matrix 升级的循环到了第六代的时候，先知这个程序可能是研究人研究得深了，自己也变得人性化起来，逐渐变成了一个好人（正确的说是一个善良仁慈的程序），她开始收留一些非法程序，有的被她养着（印度女孩），有的成了她的保镖（邹兆龙），它还开始怜悯起那些被重复悲剧命运的人类。因此，先知开始有了一个计划，她要通过一个方法让 Matrix 的升级在这一代结束。</p>
+<p>她的计划包括两个方面：一方面，她要让这一代的救世主在见到设计师时不选择进入代码之源。她的方法是让设计师稍稍改变救世主的代码，让他爱上某一个黑客。当然这一改动的真正意图是不能让设计师知道的，先知可能是告诉设计师她只是要做个小实验罢了，比如说观察加入爱情后救世主的反应，第二集里设计师自己也说：“观察你的反应是很有趣的”，先知料到设计师会低估人类感情的力量，认为救世主还是会选择进入代码之源。（所以我觉得 Neo 爱上 Trinity 是先知和设计师的安排，这虽然想起来很可悲但却合理。）这样一来，救世主就为了救心上人而放弃进入代码之源。</p>
+<p>第二集结束时，先知的这一步计划成功了，但仅有这一步是不够的，因为如果救世主不进入代码之源，那么设计师就会毁掉全人类。所以另一方面，先知必须要给救世主准备一个可以和机器大帝（设计师）谈和的筹码，而这个筹码就是 Smith 探员！</p>
+<p>先知说过，Smith 是救世主程序的反面。我认为这样的程序是不可能自己形成的，Smith 这一程序应该是先知一手改写的。按照设计师的说法，先知这一程序是要定期检查的，不然也会危及系统，这说明先知在 Matrix 中的能力（或者说权限）相当大，她极有可能用某些方法改写了 Smith 的程序（连法国人和印度小女孩都能编写程序，何况是神通广大的先知呢？），而且是用救世主程序的反面改写的。</p>
+<p>所以早在 Smith 还是个合法程序时他就强烈地表现出非法程序的“气质”（审问 Morpheus 那段，他想脱离 Matrix 的愿望比 Neo 还强）。而在救世主身上的非法程序代码激活（力量觉醒）之时，Smith 身上的非法代码也激活了。如果说救世主是设计师可控的非法程序的最终形式的话，那么 Smith 就是设计师意料之外的最可怕的非法程序。因此 Smith 是先知计划中很重要的一枚棋子，先知就是要让 Smith 强大到威胁整个 Matrix 的存亡而又让设计师无能为力的地步，而只有 Neo 可以凭借身体内与 Smith 相克的代码将其毁灭。这样一来，Neo 就可以以消灭 Smith 为条件换来和平。</p>
+<p>以上就是先知的如意算盘了，这其中有一些过程先知可以凭借她在 Matrix 内的精密计算和她对人类心理的深刻理解而预知，还有一些则是听天由命的，正像最后设计师对先知说的：“你玩了一个很危险的游戏”。先知基本上也就是赌一把。</p>
+<p>整个 Matrix 系列讲的其实就是先知这一“人类拯救计划”的执行过程。这一代的黑客代表人物 Morpheus 和 Trinity 等人找到了这一代的救世主载体 Neo。Neo 在历尽磨难后终于变成了救世主（其实是必然的），他同时也爱上了 Trinity（其实先知早就告诉 Trinity 了，这根本就是先知安排的）。——这是《黑客帝国》第一集。</p>
+<p>而第一集结尾被 Neo 干掉的 Simith 后来就顺理成章地成了非法程序，能力开始成长（复制能力）。然后 Neo 他们又从非法程序的精神领袖（法国人）那里抢来了知道如何进入代码之源的程序（锁匠）。从这个精神领袖的话中得知，似乎每一代救世主都要找他麻烦——而似乎这也是设计师的安排。后来 Neo 终于见到设计师，Trinity 也 “很及时地”遇到危险。而得知救世主真相后的 Neo 为了救心上人终于弃全人类不顾，毅然决然救了 Trinity，跟她一起回到现实。这时 Neo 突然有了在现实中击毁电子章鱼的能力。——这是《黑客帝国》第二集。</p>
+<p>这时，有复制能力的 Smith 居然复制到了一个人类身上还把人类的飞船都破坏了。人类只剩下配合 Neo 他们行动的两艘飞船。一艘返回 Zion 去支援那里的人类军队，另一艘载着 Neo 和 Trinity 去见机器的老大——机器大帝，而 Smith 就潜藏在这艘船上。途中遭被 Smith 突袭，Neo 双眼被刺瞎，但他在现实中感知代码的能力却完全觉醒了。这大概是因为在第二集结束时，Neo 接触了 Matrix 的最高管理程序——设计师而成长了，他原来只能在 Matrix 中感知代码，现在也能在现实中感知。（所以 Neo 在现实中有超能力根本不是说 Zion 也是虚拟世界，这只不过是 Neo 的能力从“插卡式”进化到“遥控式”罢了）。他凭借这一能力干掉了这个 Smith，终于闯进了机器城，但 Trinity 牺牲了。这时，Matrix 中的 Smith 果然已经如先知预期的那样几乎把整个 Matrix 里的人和程序都复制成他自己了。</p>
+<p>Neo 和机器大帝达成协议，进入 Matrix 消灭 Smith，换取人类和机器的和平。机器大帝同意了。结果 Neo 和 Smith 在无数 Smith 的注目下决战，Neo 当然打不过 Smith 了，但是最后 Smith 同化 Neo 时，Neo 身上携带的代码却让他与 Smith 同归于尽。这时，所有被 smith 同化的人都恢复原状，而和 Neo 的决斗的那个 Smith 恢复成了先知。这很容易理解，因为吸收了先知的 smith 显然是所有 smith 中最强的，所以代表无数 Smith 和 Neo 决斗的就是先知同化成的 Smith。从躺在地上的先知嘴角含笑来看，先知在被 Smith 吸收后应该是还有自我意识的，她知道自己的计划终于实现了。</p>
+<p>进攻 Zion 的机器大军由于新协议的生效而撤退了。先知和设计师在危机解除后的 Matrix 里会面。设计师遵守诺言，不再迫害那些觉醒的人类，从此觉醒的那部分人类可以在 Matrix 和 Zion 之间自由选择。Matrix 里第一次升起了不带绿色的朝阳，地球成了一个人类和机器、机器城和 Zion、觉醒的人类和 Matrix 中的人类、合法程序和非法程序共存的和谐世界。先知发起的革命成功了。——这是《黑客帝国》第三集。</p>
+<p><img src="http://pic1.zhimg.com/1fda4a629667ad38baf2ae26992880cd_b.jpg" alt=""></p>
+<p>至于 Neo 的结局如何呢？Neo 死了吗？他可能的确是牺牲了，但也有可能只是他身上的“救世主程序”那部分与 Smith 中和湮灭了。因为先知说，Neo 还是可能回来的，她的意思是不是 Neo 身上人类的那一部分会作为一个普通人重新回到 Matrix 中？这些导演没有说明，只能留给我们自己去想象了。</p>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red"><i class="fa fa-thumbs-up"></i></a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title"></h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Xiao Cui<br />'
+            + 'Author: Cui<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;Contents</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,784 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="等保三级, Xiao Cui">
+    <meta name="description" content="信息安全保护等级划分由国家公安部提出并组织制定,国家质量技术监督局发布的《计算机信息系统安全保护等级划分准则》（GB 17859-1999）分为以下五级：
+
+第一级：不损害国家安全、社会秩序和公共利益。
+第二级：对社会秩序和公共利益造成损害">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>等保三级 | Xiao Cui</title>
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    <span class="logo-span">Xiao Cui</span>
+                </a>
+            </div>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/career" class="waves-effect waves-light">
+            <i class="fa fa-briefcase"></i>
+            <span>职场</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tech" class="waves-effect waves-light">
+            <i class="fa fa-cloud"></i>
+            <span>科技</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/business" class="waves-effect waves-light">
+            <i class="fa fa-bank"></i>
+            <span>商业</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/study" class="waves-effect waves-light">
+            <i class="fa fa-graduation-cap"></i>
+            <span>博学</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/design" class="waves-effect waves-light">
+            <i class="fa fa-tachometer"></i>
+            <span>设计</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/languages" class="waves-effect waves-light">
+            <i class="fa fa-globe"></i>
+            <span>语言</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/life" class="waves-effect waves-light">
+            <i class="fa fa-coffee"></i>
+            <span>生活</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/food" class="waves-effect waves-light">
+            <i class="fa fa-cutlery"></i>
+            <span>美食</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/film" class="waves-effect waves-light">
+            <i class="fa fa-film"></i>
+            <span>影音</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/travel" class="waves-effect waves-light">
+            <i class="fa fa-plane"></i>
+            <span>旅行</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/philosophy" class="waves-effect waves-light">
+            <i class="fa fa-book"></i>
+            <span>感悟</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+            <span>搜索</span>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/avatar.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Xiao Cui</div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/career" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-briefcase"></i>
+                <span>职场</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tech" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cloud"></i>
+                <span>科技</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/business" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-bank"></i>
+                <span>商业</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/study" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-graduation-cap"></i>
+                <span>博学</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/design" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-tachometer"></i>
+                <span>设计</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/languages" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-globe"></i>
+                <span>语言</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/life" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-coffee"></i>
+                <span>生活</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/food" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cutlery"></i>
+                <span>美食</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/film" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-film"></i>
+                <span>影音</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/travel" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-plane"></i>
+                <span>旅行</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/philosophy" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-book"></i>
+                <span>感悟</span>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+        </div>
+    </nav>
+
+</header>
+
+
+
+
+    <div class="bg-cover pd-header post-cover" style="background-color: #207f4c;">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        等保三级
+                    </div>
+                    <div class="description center-align">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar fa-fw"></i>Publish:
+                    2018-05-23
+                </div>
+
+                <div class="post-date info-break-policy">
+                        <i class="fa fa-calendar-check-o fa-fw"></i>Update:
+                        2018-10-05
+                    </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-book fa-fw"></i>Read Count:
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+                
+
+                
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="信息安全保护等级划分"><a href="#信息安全保护等级划分" class="headerlink" title="信息安全保护等级划分"></a>信息安全保护等级划分</h2><p>由国家公安部提出并组织制定,国家质量技术监督局发布的《计算机信息系统安全保护等级划分准则》（GB 17859-1999）分为以下五级：</p>
+<ul>
+<li>第一级：不损害国家安全、社会秩序和公共利益。</li>
+<li>第二级：对社会秩序和公共利益造成损害，但不损害国家安全。</li>
+<li>第三级：会对社会秩序和公共利益造成严重损害，或者对国家安全造成损害。</li>
+<li>第四级：会对社会秩序和公共利益造成特别严重损害，或者对国家安全造成严重损害。</li>
+<li>第五级：会对国家安全造成特别严重损害。</li>
+</ul>
+<p><img src="https://pic4.zhimg.com/80/v2-7ff00cdfb4e16979cd753c48e0905713_hd.jpg" alt=""></p>
+<h2 id="等保三级的认证"><a href="#等保三级的认证" class="headerlink" title="等保三级的认证:"></a>等保三级的认证:</h2><p>要求：</p>
+<ul>
+<li>只有公安部授权的第三方机构才能开展该项测评工作；</li>
+<li>测评模式多样，包括访谈、文档审查、配置检查、实地查看；</li>
+<li>测评指标众多，包含物理、网络、主机、应用、数据等数十个维度</li>
+<li>充分测评和反复研究，测评完成还需要专家小组审核，并且由公安机关网监部门办理备案定级手续，之后才能拿到认证。</li>
+</ul>
+<p>认证技术要求包括物理、网络、主机、应用、数据5个方面。</p>
+<ul>
+<li>物理安全：<ul>
+<li>机房应区域划分至少分为主机房和监控区两个部分；</li>
+<li>机房应配备电子门禁系统、防盗报警系统、监控系统；</li>
+<li>机房不应该有窗户，应配备专用的气体灭火、备用发电机；</li>
+</ul>
+</li>
+<li>网络安全：<ul>
+<li>应绘制与当前运行情况相符合的拓扑图；</li>
+<li>交换机、防火墙等设备配置应符合要求，例如应进行Vlan划分并各Vlan逻辑隔离，应配置Qos流量控制策略，应配备访问控制策略，重要网络设备和服务器应进行IP/MAC绑定等；</li>
+<li>应配备网络审计设备、入侵检测或防御设备；</li>
+<li>交换机和防火墙的身份鉴别机制要满足等保要求，例如用户名密码复杂度策略，登录访问失败处理机制、用户角色和权限控制等；</li>
+<li>网络链路、核心网络设备和安全设备，需要提供冗余性设计。</li>
+</ul>
+</li>
+<li>主机安全：<ul>
+<li>服务器的自身配置应符合要求，例如身份鉴别机制、访问控制机制、安全审计机制、防病毒等，必要时可购买第三方的主机和数据库审计设备；</li>
+<li>服务器（应用和数据库服务器）应具有冗余性，例如需要双机热备或集群部署等；</li>
+<li>服务器和重要网络设备需要在上线前进行漏洞扫描评估，不应有中高级别以上的漏洞（例如windows系统漏洞、apache等中间件漏洞、数据库软件漏洞、其他系统软件及端口漏洞等）；</li>
+<li>应配备专用的日志服务器保存主机、数据库的审计日志。</li>
+</ul>
+</li>
+<li>应用安全：<ul>
+<li>应用自身的功能应符合等保要求，例如身份鉴别机制、审计日志、通信和存储加密等；</li>
+<li>应用处应考虑部署网页防篡改设备；</li>
+<li>应用的安全评估（包括应用安全扫描、渗透测试及风险评估），应不存在中高级风险以上的漏洞（例如SQL注入、跨站脚本、网站挂马、网页篡改、敏感信息泄露、弱口令和口令猜测、管理后台漏洞等）；</li>
+<li>应用系统产生的日志应保存至专用的日志服务器。</li>
+</ul>
+</li>
+<li>数据安全：<ul>
+<li>应提供数据的本地备份机制，每天备份至本地，且场外存放；</li>
+<li>如系统中存在核心关键数据，应提供异地数据备份功能，通过网络等将数据传输至异地进行备份；</li>
+</ul>
+</li>
+<li>其他：<ul>
+<li>三级等保的管理制度要求：安全管理制度、安全管理机构、人员安全管理、系统建设管理、系统运维管理。</li>
+</ul>
+</li>
+</ul>
+<p>参考：</p>
+<ul>
+<li><a href="http://www.gov.cn/gzdt/2007-07/24/content_694380.htm" target="_blank" rel="noopener">《信息安全等级保护管理办法》</a></li>
+<li><a href="https://my.oschina.net/foodon/blog/359509" target="_blank" rel="noopener">国家信息安全等级保护制度第三级要求</a></li>
+<li>信息安全技术信息系统安全等级保护测评要求</li>
+</ul>
+<h2 id="其他标准"><a href="#其他标准" class="headerlink" title="其他标准"></a>其他标准</h2><p>十大重要标准</p>
+<ul>
+<li>计算机信息系统安全等级保护划分准则 （GB 17859-1999） （基础类标准）</li>
+<li>信息系统安全等级保护实施指南 （GB/T 25058-2010） （基础类标准）</li>
+<li>信息系统安全保护等级定级指南 （GB/T 22240-2008） （应用类定级标准）</li>
+<li>信息系统安全等级保护基本要求 （GB/T 22239-2008） （应用类建设标准）</li>
+<li>信息系统通用安全技术要求 （GB/T 20271-2006） （应用类建设标准）</li>
+<li>信息系统等级保护安全设计技术要求 （GB/T 25070-2010） （应用类建设标准）</li>
+<li>信息系统安全等级保护测评要求 （GB/T 28448-2012）（应用类测评标准）</li>
+<li>信息系统安全等级保护测评过程指南 （GB/T 28449-2012）（应用类测评标准）</li>
+<li>信息系统安全管理要求 （GB/T 20269-2006） （应用类管理标准）</li>
+<li>信息系统安全工程管理要求 （GB/T 20282-2006） （应用类管理标准）</li>
+</ul>
+<p>其它相关标准</p>
+<ul>
+<li>GB/T 21052-2007 信息安全技术 信息系统物理安全技术要求</li>
+<li>GB/T 20270-2006 信息安全技术 网络基础安全技术要求</li>
+<li>GB/T 20271-2006 信息安全技术 信息系统通用安全技术要求</li>
+<li>GB/T 20272-2006 信息安全技术 操作系统安全技术要求</li>
+<li>GB/T 20273-2006 信息安全技术 数据库管理系统安全技术要求</li>
+<li>GB/T 20984-2007 信息安全技术 信息安全风险评估规范</li>
+<li>GB/T 20985-2007 信息安全技术 信息安全事件管理指南</li>
+<li>GB/Z 20986-2007 信息安全技术 信息安全事件分类分级指南</li>
+<li>GB/T 20988-2007 信息安全技术 信息系统灾难恢复规范</li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red"><i class="fa fa-thumbs-up"></i></a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title"></h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Xiao Cui<br />'
+            + 'Author: Cui<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;Contents</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,790 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Excel, Xiao Cui">
+    <meta name="description" content="快捷键
+ALT+Enter：单元格内强制换行。（公式中使用CHAR(10)来产生换行符）
+Ctrl+E : 自动填充
+Ctrl+；: 快速输入日期
+Ctrl+Shift+；: 快速输入时间
+
+常用操作
+excel中取消合并单元格后内容自动填">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Excel | Xiao Cui</title>
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    <span class="logo-span">Xiao Cui</span>
+                </a>
+            </div>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/career" class="waves-effect waves-light">
+            <i class="fa fa-briefcase"></i>
+            <span>职场</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tech" class="waves-effect waves-light">
+            <i class="fa fa-cloud"></i>
+            <span>科技</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/business" class="waves-effect waves-light">
+            <i class="fa fa-bank"></i>
+            <span>商业</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/study" class="waves-effect waves-light">
+            <i class="fa fa-graduation-cap"></i>
+            <span>博学</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/design" class="waves-effect waves-light">
+            <i class="fa fa-tachometer"></i>
+            <span>设计</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/languages" class="waves-effect waves-light">
+            <i class="fa fa-globe"></i>
+            <span>语言</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/life" class="waves-effect waves-light">
+            <i class="fa fa-coffee"></i>
+            <span>生活</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/food" class="waves-effect waves-light">
+            <i class="fa fa-cutlery"></i>
+            <span>美食</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/film" class="waves-effect waves-light">
+            <i class="fa fa-film"></i>
+            <span>影音</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/travel" class="waves-effect waves-light">
+            <i class="fa fa-plane"></i>
+            <span>旅行</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/philosophy" class="waves-effect waves-light">
+            <i class="fa fa-book"></i>
+            <span>感悟</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+            <span>搜索</span>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/avatar.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Xiao Cui</div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/career" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-briefcase"></i>
+                <span>职场</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tech" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cloud"></i>
+                <span>科技</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/business" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-bank"></i>
+                <span>商业</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/study" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-graduation-cap"></i>
+                <span>博学</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/design" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-tachometer"></i>
+                <span>设计</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/languages" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-globe"></i>
+                <span>语言</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/life" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-coffee"></i>
+                <span>生活</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/food" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cutlery"></i>
+                <span>美食</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/film" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-film"></i>
+                <span>影音</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/travel" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-plane"></i>
+                <span>旅行</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/philosophy" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-book"></i>
+                <span>感悟</span>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+        </div>
+    </nav>
+
+</header>
+
+
+
+
+    <div class="bg-cover pd-header post-cover" style="background-color: #207f4c;">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Excel
+                    </div>
+                    <div class="description center-align">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar fa-fw"></i>Publish:
+                    2018-07-07
+                </div>
+
+                <div class="post-date info-break-policy">
+                        <i class="fa fa-calendar-check-o fa-fw"></i>Update:
+                        2020-03-21
+                    </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-book fa-fw"></i>Read Count:
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+                
+
+                
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul>
+<li>ALT+Enter：单元格内强制换行。（公式中使用CHAR(10)来产生换行符）</li>
+<li>Ctrl+E : 自动填充</li>
+<li>Ctrl+；: 快速输入日期</li>
+<li>Ctrl+Shift+；: 快速输入时间</li>
+</ul>
+<h1 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h1><ol>
+<li>excel中取消合并单元格后内容自动填充。选中合并内容，点击取消单元格合并。按住ctrl+g，定位到空值，在编辑栏中输入=A2（空值前一列），按下ctrl+回车。</li>
+</ol>
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><h2 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h2><ul>
+<li>SUM：选取单元格，Alt+=组合即可打开SUM公式快速求和。多表求和：=sum(‘sheet1:sheet3’!A1)</li>
+<li>SUMIF(range（条件区域），criteria（条件），sum_range（求和区域）)</li>
+<li>SUMIFS(sum_range（求和区域）, criteria_range1（条件区域1）, criteria1（条件1）, [criteria_range2（条件区域2）, criteria2（条件2）], …)</li>
+<li>SUMPRODUCT（array1（区域1）,array2（区域2）,array3（区域3）, …） </li>
+<li>SUBTOTAL(function_num,ref1,…): 分类汇总，function_num代表不同的函数，有1-11和101-111两组，对于在筛选模式下被淘汰的行，subtotal函数不再统计这部分行数据。对于手动隐藏的行，1-11统计隐藏的行，101-111是不统计隐藏的行。</li>
+</ul>
+<p>=SUM(IF(MOD(ROW($C$2:$C$81)-2,8)=1,$C$2:$C$81))<br>每8行抽取第一行求和（输完公式按Ctrl+Shift+Enter转换为数组函数）</p>
+<h2 id="取整"><a href="#取整" class="headerlink" title="取整"></a>取整</h2><p>Round：对数值进行四舍五入。<br>INT：对数值进行取整。</p>
+<h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><ul>
+<li>exact(text1,text2)：要求非常严格，必须是两个字符串完全一样，无论内容还是大小写，还是其中有空格，都必须完全一致才判断为TRUE，否则就是FALSE。</li>
+<li>RANK（Number,ref,order）：order代表排序方式参数（如果为“0”或者忽略，则按降序排名，如果为非“0”值，则按升序排名）=RANK(B2,$B$2:$B$31,0)，确认后即可得出丁1同学的语文成绩在全班成绩中的排名结果。</li>
+</ul>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><ul>
+<li>Lookup：按查找的内容返回指定的值。（注意：第二个参数只包含单行或单列的单元格区域，其值为文本、数值或逻辑值且以升序排序。）</li>
+<li>Hlookup：横向查找返回某一行的值。</li>
+<li>Vlookup：纵向查找返回某一列的值。vlookup（查找目标，查找范围，返回值的列数，精确OR模糊查找)</li>
+</ul>
+<p>MATCH(lookup_value, lookup_array, match_type)<br>lookup_value：需要在数据表（lookup_array）中查找的值。可以为数值（数字、文本或逻辑值）或对数字、文本或逻辑值的单元格引用。可以包含通配符、星号 (<em>) 和问号 (?)。星号可以匹配任何字符序列；问号可以匹配单个字符。<br>lookup_array：查找区域必须是某一行或某一列<br>match_type：查询的指定，默认为1的情况。<br>为1时，查找小于或等于lookup_value的最大数值在lookup_array中的位置，lookup_array必须按升序排列：<br>为0时，查找等于lookup_value的第一个数值，lookup_array按任意顺序排列：<br>为-1时，查找大于或等于lookup_value的最小数值在lookup_array中的位置，lookup_array必须按降序排列。利用MATCH函数查找功能时，<br>当查找条件存在时，MATCH函数结果为具体位置（数值），否则显示#N/A错误。
+</em>建议使用match方法同时使用 On Error Resume Next；或者 On Error goto 100 语句</p>
+<p>INDEX+MATCH<br>反向查找<br>INDEX(区域, 条件)<br>INDEX(B2:B5, MATCH(value, C2:C5, 0))<br>双向查找<br>INDEX(区域, 行号, 列号)<br>INDEX(B2:C5, MATCH(value, A2:A5,0), MATCH(value, B1:C1,0))<br>多条件查找<br>INDEX(区域, 条件)<br>INDEX(B2:B5, MATCH(value&amp;value, C2:C5&amp;D2:D5,0))</p>
+<p>比较lookup和match<br>MATCH函数用于在指定区域内按指定方式查询与指定内容所匹配的单元格位置；<br>LOOKUP函数用于在指定区域内查询指定内容多对应的匹配区域内单元格的内容。</p>
+<p>比较find和search<br>返回查找的值在单元格的位置。<br>Find：区分大小分，但不支持通配符<br>Search：支持通配符,但不区分大小写</p>
+<h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><ul>
+<li>IF(条件,结果1,结果2)。</li>
+<li>IFERROR(value, value_if_error)：value检查是否存在错误的参数，value_if_error代表公式的计算结果为错误时要返回的值。</li>
+<li>IFNA函数，语法与IFERROR基本一致，区别是IFERROR是针对所有错误值的处理函数，IFNA是匹配类型函数的专用错误（#N/A）的处理函数。</li>
+</ul>
+<h2 id="计数"><a href="#计数" class="headerlink" title="计数"></a>计数</h2><ul>
+<li>Count（区域）：计算区域中所含数字的单元格个数。</li>
+<li>Counta（区域）：计算区域中非空单元格个数。</li>
+<li>Countblank（区域）：计算某个区域中空单元格个数。</li>
+<li>Countif（条件区域，条件）：计算某个区域中指定条件的单元格个数。</li>
+<li>Countifs（条件区域1，条件1，条件区域2，条件区域2，…）：计算一组给定条件下的单元格个数。</li>
+<li>DCOUNT(database,field,criteria)：返回列表的列中满足指定条件并且包含数字的单元格数目。=DCOUNT(A1:D11,”语文”,F1:G2)，确认后即可求出“语文”列中，成绩大于等于70，而小于80的数值单元格数目</li>
+<li>LEN(text)：统计文本字符串中字符数目。</li>
+<li>FREQUENCY(data_array,bins_array)：Bins_array表示为前面数组进行分隔一列数值。特别提醒：上述输入的是一个数组公式，输入完成后，需要通过按“Ctrl+Shift+Enter”组合键进行确认，确认后公式两端出现一对大括号（{}），此大括号不能直接输入。</li>
+</ul>
+<h2 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h2><ul>
+<li>now()</li>
+<li>today()</li>
+<li>DATE(year,month,day)：给出指定数值的日期。=DATE(2003,13,35)，确认后，显示出2004-2-4。</li>
+<li>DATEDIF(date1,date2,”m”)：计算返回两个日期参数的差值。</li>
+<li>WEEKDAY(serial_number,return_type)：给出指定日期的对应的星期数。return_type，当Monday（星期一）为1、Sunday（星期日）为7时，该参数为2（这种情况符合中国人的习惯）；当Monday（星期一）为0、Sunday（星期日）为6时，该参数为3]。如果是指定的日期，请放在英文状态下的双引号中，如=WEEKDAY(“2003-12-18”,2)。</li>
+<li>DAY(serial_number)：求出指定日期或引用单元格中的日期的天数。</li>
+</ul>
+<h2 id="位置引用"><a href="#位置引用" class="headerlink" title="位置引用"></a>位置引用</h2><ul>
+<li>COLUMN(reference)：显示所引用单元格的列标号值</li>
+<li>ROW(reference)：显示所引用单元格的行标号值</li>
+<li>OFFSET(reference,rows,cols,height,width)以指定的引用为参照系，通过给定偏移量得到新的引用。(参考单元格，移动的行数，移动的列数，所要引用的行数，所要引用的列数）</li>
+<li>INDEX(array,row_num,column_num)：=INDEX(A1:D11,4,3)，确认后则显示出A1至D11单元格区域中，第4行和第3列交叉处的单元格（即C4）中的内容。</li>
+</ul>
+<h2 id="逻辑判断"><a href="#逻辑判断" class="headerlink" title="逻辑判断"></a>逻辑判断</h2><ul>
+<li>ISERROR(value)：=IF(ISERROR(A35/B35),””,A35/B35)，如果B35为空或“0”，则相应的单元格显示为空，反之显示A35/B35<br>的结果。</li>
+</ul>
+<h2 id="字符转换"><a href="#字符转换" class="headerlink" title="字符转换"></a>字符转换</h2><ul>
+<li>PHONETIC：数值格式转换为纯文本，PHONETIC(A1:B4)</li>
+<li>TEXT(value,format_text)：根据指定的数值格式将相应的数字转换为文本形式。B68=1280.45，=TEXT(B68, “$0.00”)，确认后显示为“$1280.45”。</li>
+<li>VALUE(text)：将一个代表数值的文本型字符串转换为数值型。</li>
+</ul>
+<h2 id="文本操作"><a href="#文本操作" class="headerlink" title="文本操作"></a>文本操作</h2><ul>
+<li>CONCATENATE(Text1，Text……)：连接字符，如=CONCATENATE(A14,”@”,B14,”.com”)</li>
+<li>Left(text, num_chars)：text代表要截取的内容，num_chars代表从左边截取的位数。</li>
+<li>Mid(text,start_num,num_chars)：text代表要截取的内容，start_num代表从第几位开始截，num_chars代表截多少个字符。</li>
+<li>Right（text, num_chars）：text代表要截取的内容，num_chars代表从右边截取的位数。</li>
+</ul>
+<h2 id="hyperlink"><a href="#hyperlink" class="headerlink" title="hyperlink"></a>hyperlink</h2><p>Hyperlink（Link-location，Friendly-name）</p>
+<p>比如，<br>=HYPERLINK(“C:\Users\yongkang.cui\Documents\Accenture\CMDB”,”CMDB”)<br>=HYPERLINK(“#A1”, “跳转到A1单元格”)<br>=HYPERLINK(“#sheet2!A1:A2”, “跳转到A1:A2单元格”)</p>
+<h1 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h1><h2 id="生动的图表"><a href="#生动的图表" class="headerlink" title="生动的图表"></a>生动的图表</h2><p>先用数据生成一个普通的柱形图。插入一个形状，复制一下，然后选中柱形，粘贴。复制粘贴进柱形的填充方式默认是拉伸, 这种拉伸对几何图形影响不大（例如第一式中的三角形），但是对于构造复杂的图形来说，影响就特别大。把填充选项中的“拉伸”改成“层叠”即可解决。折线图的折点、复合图表也同样适用。</p>
+<h2 id="高级图表"><a href="#高级图表" class="headerlink" title="高级图表"></a>高级图表</h2><h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>Infogramfor Office<br>People Graph</p>
+<h1 id="疑难问题"><a href="#疑难问题" class="headerlink" title="疑难问题"></a>疑难问题</h1><ol>
+<li>excel文件过大：包含隐藏对象，CTRL+G打开定位对话框，点击定位对话框下的“定位条件”选择“对象”并确定，再按DEL键就可以删除所有的对象了。大量数据导入后在原表中进行加工时会使文件变大，一般可以通过另存进行解决</li>
+</ol>
+<h1 id="网站教程"><a href="#网站教程" class="headerlink" title="网站教程"></a>网站教程</h1><ul>
+<li><a href="http://www.excelhome.net/lesson/animation/lesson/animation/excel2/" target="_blank" rel="noopener">excelhome</a></li>
+<li><a href="http://excelpro.blog.sohu.com/" target="_blank" rel="noopener">excelPro</a></li>
+<li>@刘万祥ExcelPro：《Excel图表之道》，《用地图说话》的作者。</li>
+<li>@Excel 大全</li>
+<li>@图表技巧：藏宝图系列</li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red"><i class="fa fa-thumbs-up"></i></a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title"></h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Xiao Cui<br />'
+            + 'Author: Cui<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;Contents</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+</body>
+</html>

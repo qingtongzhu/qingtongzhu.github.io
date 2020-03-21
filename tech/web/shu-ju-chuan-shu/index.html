@@ -1,0 +1,706 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Xiao Cui">
+    <meta name="description" content="交易数据主要通过UDP与TCP两种方式进行网络传输，下面以UDP包为例，（TCP 更复杂些，但原理差不多），简单来介绍下交易数据在电脑内的传输、解析。交易数据到达网卡后，通过PCI Express 或HyperPort接口，再传到操作系统的">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Xiao Cui</title>
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    <span class="logo-span">Xiao Cui</span>
+                </a>
+            </div>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/career" class="waves-effect waves-light">
+            <i class="fa fa-briefcase"></i>
+            <span>职场</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tech" class="waves-effect waves-light">
+            <i class="fa fa-cloud"></i>
+            <span>科技</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/business" class="waves-effect waves-light">
+            <i class="fa fa-bank"></i>
+            <span>商业</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/study" class="waves-effect waves-light">
+            <i class="fa fa-graduation-cap"></i>
+            <span>博学</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/design" class="waves-effect waves-light">
+            <i class="fa fa-tachometer"></i>
+            <span>设计</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/languages" class="waves-effect waves-light">
+            <i class="fa fa-globe"></i>
+            <span>语言</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/life" class="waves-effect waves-light">
+            <i class="fa fa-coffee"></i>
+            <span>生活</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/food" class="waves-effect waves-light">
+            <i class="fa fa-cutlery"></i>
+            <span>美食</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/film" class="waves-effect waves-light">
+            <i class="fa fa-film"></i>
+            <span>影音</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/travel" class="waves-effect waves-light">
+            <i class="fa fa-plane"></i>
+            <span>旅行</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/philosophy" class="waves-effect waves-light">
+            <i class="fa fa-book"></i>
+            <span>感悟</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+            <span>搜索</span>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/avatar.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Xiao Cui</div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/career" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-briefcase"></i>
+                <span>职场</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tech" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cloud"></i>
+                <span>科技</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/business" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-bank"></i>
+                <span>商业</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/study" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-graduation-cap"></i>
+                <span>博学</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/design" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-tachometer"></i>
+                <span>设计</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/languages" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-globe"></i>
+                <span>语言</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/life" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-coffee"></i>
+                <span>生活</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/food" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cutlery"></i>
+                <span>美食</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/film" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-film"></i>
+                <span>影音</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/travel" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-plane"></i>
+                <span>旅行</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/philosophy" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-book"></i>
+                <span>感悟</span>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+        </div>
+    </nav>
+
+</header>
+
+
+
+
+    <div class="bg-cover pd-header post-cover" style="background-color: #207f4c;">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        
+                    </div>
+                    <div class="description center-align">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar fa-fw"></i>Publish:
+                    2018-07-07
+                </div>
+
+                <div class="post-date info-break-policy">
+                        <i class="fa fa-calendar-check-o fa-fw"></i>Update:
+                        2018-10-05
+                    </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-book fa-fw"></i>Read Count:
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+                
+
+                
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>交易数据主要通过UDP与TCP两种方式进行网络传输，下面以UDP包为例，（TCP 更复杂些，但原理差不多），简单来介绍下交易数据在电脑内的传输、解析。交易数据到达网卡后，通过PCI Express 或HyperPort接口，再传到操作系统的内核（OS Kernel）进行TCP/IP 协议栈的解析，再把解析后的数据内容通过socket 接口，推送到用户程序即策略中。然后用户程序再对数据按照规定的格式进行解析，然后应用在策略逻辑中，进行分析，下单等动作。以上的这种方式主要是基于现有电脑的结构的基本做法，配置好的快些，但总的来说整个过程的处理时间，数量级在两位数微秒（us，百万分之一秒）左右。数据量多的时候，操作系统内核 对TCP/IP 的解析所用CPU也消耗很多，处理速度会加速下降。一般来说，1G 的数据需要一个GHZ的CPU进行解析，一般的CPU的速度也就是2-3GHZ，这个比例在数据量大时是相当大的。在整个交易数据内部传递与解析的过程中，能够做文章的主要是TCP/IP 协议栈的解析和业务数据的解析。因为策略逻辑的多样性，对策略逻辑的普遍加速的可能性不大。 TCP/IP 协议栈的解析（TOE，TCP/IP offload engine）和业务数据的解析主要由专用的网卡来做。目前有两种方法来实现，一种是在网卡附带的CPU上进行处理；另一种是网卡+FPGA的形式，用FPGA来做TCP/IP的解析和业务数据的解析。 FPGA 因为全部是硬件，速度会更快些。理论上来说，用ASIC会更快些，但是这个市场是个小众市场，用ASIC并不划算，目前还没有人这么做。通过以上的这些硬件加速的方法，基本上能达到个位数微秒（us）的延迟。用硬件做的好处除了延迟小外，在处理的容量和稳定性方面上也有诸多好处。 </p>
+<p>FPGA 最基本的用处就是在里面实现了网络协议栈，用来处理网络包。网络协议栈和常见的金融协议，现在都已经有了比较成熟的实现。很多小公司就是买来直接用。当网卡收到包含行情数据的新的包:</p>
+<ol>
+<li>如果没有 FPGA，数据要复制到内存中，由 CPU 处理。而复制过程发生在网卡收到完整的包以后，而CPU要等包完全复制到内存后，再开始解析网络协议，金融协议。整个过程，从数据包到达网卡，到获得数据，用了 kernel bypass 以后，需要几百纳秒的时间。</li>
+<li>用了 FPGA 的话，网卡从开始接收数据包，FPGA 卡就可以开始解析了。而网络包传递完毕，数据也解析完毕了。这一过程是几十纳秒时间。</li>
+</ol>
+<p>当解析完金融数据：</p>
+<ol>
+<li>可以再复制到 user space 供应用程序使用，生成交易信号以后，交易情况比较复杂，但是发送网络包的实现相对简单，使用 kernel bypass + 网卡底层的API，发一个正常的FIX 协议的包，也就一两百纳秒，所以很多时候就不走 FPGA 了。</li>
+<li>对于比较简单的策略，可以完全在 FPGA 中实现，生成交易指令，再从 FPGA 对接的网卡直接发去交易所。</li>
+</ol>
+<p>算 tick to trade 的时间，需要数据进入内存 CPU 处理的，要大几百纳秒，标准差10-20 ns，完全 FPGA 处理的是大几十纳秒，标准差5-10 ns。具体数据还和策略有关。</p>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red"><i class="fa fa-thumbs-up"></i></a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title"></h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Xiao Cui<br />'
+            + 'Author: Cui<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;Contents</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+</body>
+</html>

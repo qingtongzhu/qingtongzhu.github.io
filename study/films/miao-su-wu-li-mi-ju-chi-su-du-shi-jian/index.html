@@ -1,0 +1,734 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Xiao Cui">
+    <meta name="description" content="2015-07-15
+文:沈杭
+距离=速度*时间
+　　在同一平面内，任意定出A、B两点，并由A、B两点各自生发出任意的运动轨迹，但是AB不能回到各自的原点，且只能在O点处发生第一次相交。并假设相交之后，AO接下来的运动轨迹必须是之前OB的轨">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Xiao Cui</title>
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    <span class="logo-span">Xiao Cui</span>
+                </a>
+            </div>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/career" class="waves-effect waves-light">
+            <i class="fa fa-briefcase"></i>
+            <span>职场</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tech" class="waves-effect waves-light">
+            <i class="fa fa-cloud"></i>
+            <span>科技</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/business" class="waves-effect waves-light">
+            <i class="fa fa-bank"></i>
+            <span>商业</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/study" class="waves-effect waves-light">
+            <i class="fa fa-graduation-cap"></i>
+            <span>博学</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/design" class="waves-effect waves-light">
+            <i class="fa fa-tachometer"></i>
+            <span>设计</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/languages" class="waves-effect waves-light">
+            <i class="fa fa-globe"></i>
+            <span>语言</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/life" class="waves-effect waves-light">
+            <i class="fa fa-coffee"></i>
+            <span>生活</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/food" class="waves-effect waves-light">
+            <i class="fa fa-cutlery"></i>
+            <span>美食</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/film" class="waves-effect waves-light">
+            <i class="fa fa-film"></i>
+            <span>影音</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/travel" class="waves-effect waves-light">
+            <i class="fa fa-plane"></i>
+            <span>旅行</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/philosophy" class="waves-effect waves-light">
+            <i class="fa fa-book"></i>
+            <span>感悟</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+            <span>搜索</span>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/avatar.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Xiao Cui</div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/career" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-briefcase"></i>
+                <span>职场</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tech" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cloud"></i>
+                <span>科技</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/business" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-bank"></i>
+                <span>商业</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/study" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-graduation-cap"></i>
+                <span>博学</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/design" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-tachometer"></i>
+                <span>设计</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/languages" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-globe"></i>
+                <span>语言</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/life" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-coffee"></i>
+                <span>生活</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/food" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-cutlery"></i>
+                <span>美食</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/film" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-film"></i>
+                <span>影音</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/travel" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-plane"></i>
+                <span>旅行</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/philosophy" class="waves-effect waves-light">
+                <i class="fa fa-fw fa-book"></i>
+                <span>感悟</span>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+        </div>
+    </nav>
+
+</header>
+
+
+
+
+    <div class="bg-cover pd-header post-cover" style="background-color: #207f4c;">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        
+                    </div>
+                    <div class="description center-align">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar fa-fw"></i>Publish:
+                    2018-08-04
+                </div>
+
+                <div class="post-date info-break-policy">
+                        <i class="fa fa-calendar-check-o fa-fw"></i>Update:
+                        2018-10-05
+                    </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-book fa-fw"></i>Read Count:
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+                
+
+                
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>2015-07-15</p>
+<p>文:沈杭</p>
+<p>距离=速度*时间</p>
+<p>　　在同一平面内，任意定出A、B两点，并由A、B两点各自生发出任意的运动轨迹，但是AB不能回到各自的原点，且只能在O点处发生第一次相交。并假设相交之后，AO接下来的运动轨迹必须是之前OB的轨迹，BO接下来的运动轨迹也必须是与之前OA的轨迹完全重合，试问A与B在经历了与对方的轨迹重合之后的方向将何去何从？</p>
+<p>　　这不是一个用定理和数字来解答的数学问题。请想象它是一个借用数学模型的哲学问题，或者再肤浅一点，这是个感情问题。</p>
+<p>　　AOB与BOA之后，再也无法形成一个能永远复刻对方痕迹的轨道，因为A与B都不能再回到原点，就像时间回不到过去，河流回不到源头。在经历了部分的交融之后，AB只能再一次分离，如一个想拼凑圆满却终究不能合为一的玩具火车的轨道那样，两辆火车只能再一次的分道扬镳，或许从此再无交集。</p>
+<p>　　但是AB并非不能在一起，最长久的线路莫过于从此并肩相伴，平行相行。距离太远固然会相忘，但可知太近也同样不能遂意？唯有适当的距离和相同的运行速度，方能相携行于时空之中。</p>
+<p>第一个故事讲得是受距离掌控的、为了别离的奔赴与相聚。</p>
+<p>　　这个世界在十三岁的孩子眼中，不可避免的会显得更大更远更困难，因此从东京到岩舟的路途对于那时的远野贵树而言，似乎更像一次冒险。他手心里紧紧攥着一张计算好了到站时间和发车时间的纸条，只是猝不及防的大雪让本以为三小时就能完成的旅程翻倍拉长，而对于已在路上不能回头亦不能向前的贵树来说，等待的时间仿佛变成了永恒，窗外是漫天大雪，越转车越空旷人稀的车厢，只剩下对明里的思念与回忆是仅存的支持着他的温暖和力量。</p>
+<p>　　恕我直言，一个孩子还并不太懂得如何去爱人，他更多的是爱着对方身上清晰可见的自己的影子。同为需要随着父母工作而习惯了到处搬迁转学的孩子，习惯了总是不断的适应陌生的新环境和难以长久的友谊。而且同样身体不好而喜欢流连图书馆，喜欢看同样类型的书，一起兴高采烈的讨论远古时代的奇异生物。如此相似的精神世界，则必然导致互相紧紧的吸引、依赖、相伴，于是他们在一起不怕流言蜚语，并忘记也许未来还会分离而坚信这种相伴会长久持续。这种感情当然是爱，只不过，既是爱对方，亦是爱自己。以至于在贵树得知明里要离开的时候，他的悲伤更多的是因为自己即将失去明里，而忽略了既难过又愧疚的明里。他们毕竟只是个孩子。而在此分别后的一年里，贵树渐渐明白了当初只顾忌自己感受的行为是自私而不成熟的，他对当时那个没有得到自己一句安慰便潸然离开的明里充满了抱歉与心疼。</p>
+<p>　　而好在明里写来了信。即使不再常伴两侧，只是鸿雁传书，也还是觉得亲切贴心。那时纯真，心上尚未受蒙昧，简简单单的就能把一个人牢牢记在心中。所以即使不见面也没有任何关系，因为以为想见的时候随时都能见，直到谁又知命运会把他们分拨得更远，远到连心的距离也被抽离开去。</p>
+<p>　　在相见的可能变得更渺茫之前，贵树想要去见上明里一面，附带着要交给明里一封写了足足写了两周的信，写满了当时还不成熟的自己对于她的离开所表现出的软弱无能的悔恨，以及还有其他想说的话。总之，那封信是他彼时的真心，却在等车的站台上被大风吹走了。这趟路途实在太艰难了，那无法靠一己之力穿越的距离，那不动声色却让人望而却步的时间，那狂暴不讲情面的大风大雪，通通联合起来为难这个小小的少年。</p>
+<p>　　贵树在心中祈望着明里不要等下去了，在预约的时间过了之后还未见他的到来就乖乖的回家去吧。而等待之于明里是唯一能做也唯一想做的事情。贵树的身上也有明里的影子，如果换成是明里，她也会毫不犹豫的从凄凄风雪中赶来，所以她相信贵树也相信自己，他一定会来，她也一定会等下去。两人所受的煎熬是相同的，带着不断升起的希望和不断灭掉的失望，带着即将见面的兴奋与等待未果的挫败，带着对过去的回忆与对未来的想象，彼此都受尽了折磨、各怀着委屈，然后心与心之间的向往却一刻未停。</p>
+<p>　　而唯有这样经历了苦楚的相逢，才能最刻骨、最深情。</p>
+<p>　　于是大雪也变成了樱花雨。</p>
+<p>　　——“我似乎明白了，永恒啊心灵啊灵魂啊那些东西究竟在何处，突然，我有种错觉，仿佛和明里一起分享了自己十三年来的点点滴滴，紧接着，下一刻，我觉得极其难受，开始感到悲伤，因为我已经不知道，该如何去珍惜明里的那份温存，那份情意，该将它们带向何处……我深知，这以后的将来，我们不可能一起度过，对于命途多舛的人生以及渺茫的时间阻挡在我们之间这一事实，我们无可奈何。”</p>
+<p>　　就在亲吻的那一瞬间，彼此都走进了对方的灵魂，并觉得那轮廓与自己深深相契。而下一秒，他们都顿悟了，相交之后就是无限的别离，此时此刻所拥有的，马上就开始要失去。贵树那突如其来的悲伤，大概就是意识到了“明日隔山岳，世事两茫茫”的悲怆，他无法守护这份情意，只有珍惜这最后的时光，黯然面对来日升起的太阳。</p>
+<p>　　他没有提及那封被风刮走的信，即使他们聊了整整一晚，也没有用言语诉说过信中的内容。他在那一吻之后觉得世界变得判若两样，因为在此之前他一直无法真切体会距离与时间横亘在他们之间的阻碍之巨大，即使意识到也不愿承认自己的无力。诉说更多的思念与爱意只会徒增离别的疼痛。</p>
+<p>　　而看着驶出站台的列车带走贵树的明里，也掏出同样一封没有交出的信。他们是世界上的另一个自己，才会如此贴近、如此懂得。为了让对方能更坚强的走得远些，未说出口的秘密从此就由自己担当。</p>
+<p>第二个故事讲得是因为速度的不同而最后不得不放手的追逐。</p>
+<p>　　少年贵树的梦里是一片广袤的夜空，繁星璀璨，云蒸霞蔚，他和一个看不清面容的女孩子登上高地，东方的天际深远而辽阔，明明不是触手可及，却让人想要翻山越岭的去追寻。</p>
+<p>　　他似乎和明里断了联系，离别时的承诺也许因为现实的种种而无法践行。他所强烈盼望的得到更多的守护明里的力量似乎大过了对于明里本身的思念，一心想要长大、变强大，到梦中的宇宙深处去，而曾经那个让他产生如此动力的原因，反而有些模糊不清了。</p>
+<p>　　而在澄田花苗的眼里，这个东京来的男孩子是那么的英俊又温柔，聪明且优秀。他的眼神总是有些忧伤，像装着许多心事，让花苗觉得心疼无比。他偶尔拿着手机在发邮件，却不知道是给谁，也不忍心问他些什么。想更多的了解他一点，但又因为自己的胆小而望而生畏。她从对他一见钟情开始就默默暗恋他许多年，只是这些年里，永远是跟在他的身后，看着他的背影胆怯的往前追着。他也只是向前走了很远之后，才回头来看她一眼，好像两人之间，永远无法并肩而行。</p>
+<p>　　花苗只知道自己喜欢他，就只是一份简简单单的想看见他想靠近他的心情。但是他向前走的步伐是那样坚定，他似乎清楚的知道自己要去哪里，要去做什么，而不像她这样，除了知道自己喜欢远野外一无所知，而这暗恋所连带着的失落情意，让她什么事也做不好。填报志愿的日期已过，花苗仍然不知方向，她讲这份迷茫说与贵树听的时候，却听到贵树说自己也是同样。彼时的花苗大约有了一种远野同学不再是走在前方而是与自己平行的欣慰。她依然不知道自己的前方要去往哪里，但是她至少知道了，脚踏实地的将力所能及的事情完成。于是暗恋的正面能量爆发，终于成功的站在了冲浪板上。</p>
+<p>　　贵树所迷惘的则是在做完了所有自己可以掌控的事情之后，接下来的不可知的未来又会导向哪里。在这几年里，心中对明里的那份爱已经渐渐飘散，在他们并没有试图努力战胜所谓的多舛人生以前就已经认输投降了，于是支撑着那份爱意的东西也就如樱花一样飘零、而人生还有很长的路，远野贵树已经忘了去留意那些吹向身后的风，而是专注于远方，梦中那闪着熠熠光辉的太阳系，当火箭以每小时五公里的速度驰向宇宙的深渊，谁还会记得樱花以每秒五厘米的速度归于尘土。</p>
+<p>——“那真是一段难以想象的孤独旅程，在真正的黑暗中只能一路向前，连一个氢原子都不会遇见。只是因为深信着正在看靠近那个埋藏着世界的秘密的深渊。就这样，我们是要去往哪里，又能到达哪里呢？”</p>
+<p>　　花苗看到了他们之间这令人绝望的差异，一如当初贵树和明里的什么也没有说一样，她也按捺住了心中的涌动，她只是他呼啸而过时身边转瞬即逝的风景，而他的速度之快，她实在追不上。</p>
+<p>第三个故事讲得是被时间施以作用后而蜕变成长的心灵。</p>
+<p>　　又过了许多年。</p>
+<p>　　——“只是简单的生活着，悲伤到处积累，被日光晒着的床单、洗漱台上的牙刷、还有手机的通讯记录。曾经交往过三年的女孩子发来短信说：我们即使发了一千次短信，但心与心的距离，估计只能靠近一厘米。过往数年间，我只是想着先往前走，想要触摸遥不可及的事物，但连那具体的目标是什么，以及几乎可以称作是威胁一样的回忆从哪里涌出都不知道。只是不停工作着，意识到了才发现，那渐渐失去弹性的心，很是痛苦。于是，某个早晨，我察觉到曾经如此真切的感情就这样干干净净地消失殆尽。”</p>
+<p>　　曾经花苗以为贵树的眼睛只是深情又坚定的凝视着她所不知道的某个地方的某个人，许多年后，贵树的眼里却早已不再怀有远方。意识到时间是个麻木中饱含着心酸的字眼，在二十四个小时一轮回的重复中，他的梦里不再有星空中的银河系和那个陪在他身边眺望远方的人影，不知道还可以做怎样的努力，过上怎样的生活才会产生发自心底的快乐。他一直以为往前走就能得到想要的生活和答案，可是抛开过去走上前去却发现并没有什么不同，也并没有得到更多——反而，在岁月的流逝中、在心脏被时间打磨的粗糙麻木之后，过去拥有的珍贵回忆已如流砂滑落，所剩无几。</p>
+<p>　　左手无名指上戴着钻戒的明里梦见了那年贵树去看她的那个夜晚。她清楚的记得那年十三岁，还完整的保存着那封没有说与对方知道的信件。任心中涌动着如何澎湃的怀念，她都只付之安然的一笑。那样的奔赴和那样的等待，每个人的一生中都应当有一次，仅有那么一次，然后就永生难忘在长大后拥挤的心房里。时间温柔又残忍的阻挡了波涛汹涌的情愫，把翻天覆地揽成一湾涟漪，明里坐在当年贵树离开时乘坐的同一班列车上想起那个关于年少时如樱花般柔美的梦与旧时光，心中欣慰曾经拥有过那如与自己复刻般相似的灵魂。只是如今、未来，会有另一个人与她牵手前行。</p>
+<p>　　明里肯定也想象过贵树现在会是什么模样，却不知那个温柔的少年被岁月打败，他看上去消极沉默，软弱无力，丧失了爱一个人的勇气和生存的方向。面对前女友的电话和短信沉默不理，贵树何尝不想要当年那份与另一颗心能依偎取暖的亲密，而那个女孩子，只是寂寞时的替补，无法有精神上的交集，靠不进别人，也不想被人随便靠近。</p>
+<p>　　曾经他们都努力过，即使分开的距离再遥远，也还是尝试着保持联系，在街道的转角处，在自动扶梯上下行时，在列车呼啸而过的窗外，在风吹草动的山坡，一抬眼一回首的地方，都好像有对方的身影闪过。直到某一天，也许是信件被弄丢了，也许是对方没有再回，当一次又一次的期盼被空空的邮箱打破，当长期以来耐心的等待终于被没有回应的时间揉碎，再靠近的心也变得坚硬冰凉起来，不自觉的随着主人走向各自的方向。那份深情的源泉逐渐干涸，还剩一星朦胧的影廓，记得有一个人还值得自己思念，而他或她的样子，慢慢的就不再记得了，再晚一些时候，是为了谁而如此努力的生活，也一并忘记了，只剩下懵懂中要到往的前方，和孤身一人。</p>
+<p>　　</p>
+<p>　　直到许多年后，在当初一起放学回家经过的路上，在又一个和当初一样沐浴着樱花雨的明媚春天，列车就要驰过铁道在发出急急的警告声，那个已经几乎相忘的人迎面而过。熟悉的磁场发出呼唤，回过头时，已被列车阻隔。贵树一直等着列车走过，明里回了头，却没有再等待。看着空无一人的对面，在樱花缓缓下落的画面里，贵树却浮现出了久违的笑容。</p>
+<p>　　某个早晨，我们都不知不觉的将过去与水龙头流下的水流一起冲走。伤痛的过去走了，连带着一直以来努力生存的更好的意义。阳光照耀的笑脸里，灵魂依旧疲惫。我依然不懂得，最后的最后我们什么也不记得，只记得爱过。那段经历丰满内心盛开的无知情意，是该用来深爱还是回忆。 我会不记得你的脸，辨认不出你的声音，你身上特有的味道早已不是我的专属。每走一步，包裹着我的世界就随着移动一厘米。爱过之后，我们会相距多少光年的距离。</p>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red"><i class="fa fa-thumbs-up"></i></a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title"></h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Xiao Cui<br />'
+            + 'Author: Cui<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;Contents</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+</body>
+</html>
